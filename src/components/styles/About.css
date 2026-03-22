@@ -1,0 +1,213 @@
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  place-items: center;
+  position: relative;
+  opacity: 1;
+  height: auto;
+  width: var(--cWidth);
+  margin: auto;
+}
+
+.about-me {
+  padding: 50px 0px;
+  padding-bottom: 0;
+  width: 500px;
+  max-width: calc(100% - 15px);
+}
+
+.about-me h3 {
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-weight: 400;
+  color: var(--accentColor);
+}
+
+.about-me p {
+  font-size: 33px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 1px;
+}
+
+/* ── Mobile About card (< 768px) ── */
+@media only screen and (max-width: 767px) {
+  .about-section {
+    justify-content: center;
+    padding: 30px 0 40px;
+  }
+
+  .about-me {
+    width: 100%;
+    max-width: calc(100% - 30px);
+    padding: 28px 24px 28px;
+    background: linear-gradient(
+      135deg,
+      rgba(94, 234, 212, 0.06) 0%,
+      rgba(255, 255, 255, 0.03) 100%
+    );
+    border: 1px solid rgba(94, 234, 212, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-sizing: border-box;
+  }
+
+  .about-me h3 {
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-bottom: 14px;
+    margin-top: 0;
+  }
+
+  .about-me p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    color: rgba(234, 229, 236, 0.88);
+  }
+
+  /* Mobile photo styles */
+  .about-photo-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 16px;
+    border-radius: 12px;
+  }
+
+  .about-photo {
+    height: 160px;
+    width: 100%;
+    object-position: center 15%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .about-me {
+    max-width: 520px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .about-section {
+    justify-content: center;
+  }
+  .about-me {
+    width: 500px;
+    max-width: calc(100% - 70px);
+    transform: translateY(0%);
+  }
+  .about-section {
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .about-section {
+    width: var(--cWidth);
+    justify-content: right;
+    align-items: center;
+    max-width: 1920px;
+    height: var(--vh);
+    padding: 0px;
+    opacity: 1;
+    overflow: hidden;
+  }
+  .about-me {
+    padding: 30px 28px;
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    /* Desktop card styles — same feel as mobile */
+    background: linear-gradient(
+      135deg,
+      rgba(94, 234, 212, 0.06) 0%,
+      rgba(255, 255, 255, 0.03) 100%
+    );
+    border: 1px solid rgba(94, 234, 212, 0.18);
+    border-radius: 20px;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-sizing: border-box;
+  }
+  .about-me h3 {
+    margin: 0;
+    font-size: 13px;
+    letter-spacing: 6px;
+  }
+  .about-photo-wrapper {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 280px;
+    margin-bottom: 0;
+  }
+  .about-photo {
+    height: 170px;
+  }
+  .about-me p {
+    font-size: 1.6vw;
+    line-height: 2.1vw;
+    font-weight: 500;
+    color: rgba(234, 229, 236, 0.9);
+  }
+}
+
+@media only screen and (min-width: 1950px) {
+  .about-me p {
+    font-size: 2.5rem;
+    line-height: 2.7rem;
+  }
+}
+
+/* ── About Profile Photo ── */
+.about-photo-wrapper {
+  width: 200px;
+  border-radius: 16px;
+  padding: 3px;
+  background: conic-gradient(
+    from 225deg,
+    rgba(34, 211, 238, 0.15) 0deg,
+    rgba(34, 211, 238, 0.9) 180deg,
+    rgba(34, 211, 238, 0.15) 360deg
+  );
+  box-shadow: 0 0 28px rgba(34, 211, 238, 0.2);
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.about-photo {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 14px;
+  display: block;
+}
+
+@media only screen and (min-width: 1200px) {
+  .about-photo-wrapper {
+    width: 270px;
+  }
+  .about-photo {
+    height: 180px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .about-photo-wrapper {
+    width: 310px;
+  }
+  .about-photo {
+    height: 210px;
+  }
+}
